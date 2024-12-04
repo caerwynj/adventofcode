@@ -3,7 +3,7 @@ include "cmd.m";
 
 main(argv:list of string)
 {
-	print("AoC 1.1\n");
+	print("AoC 1.2\n");
 	argv = tl argv;
 	l1 := readf(hd argv);
 	l2 := readf(hd tl argv);
