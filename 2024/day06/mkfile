@@ -1,0 +1,17 @@
+%.dis: %.b cmd.m
+	limbo -g $stem.b
+
+DIS=\
+	t1.dis\
+	t2.dis\
+
+
+all: $DIS cmd.m
+	mash t1 test
+	mash t2 test
+
+clean:
+	rm *.sbl *.out
+
+nuke:
+	rm -f *.sbl *.dis *.out
