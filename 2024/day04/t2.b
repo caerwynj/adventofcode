@@ -22,7 +22,6 @@ main(argv:list of string)
 		}
 		l = tl l;
 	}
-#	pr(a, m, n);
 
 	sol := 0;
 	for(i = 4; i < m+4; i++) {
@@ -30,18 +29,12 @@ main(argv:list of string)
 			if(a[i][j] == 'A') {
  sol += (a[i-1][j-1] == 'M'  && a[i+1][j+1] == 'S'
 	&& a[i+1][j-1] == 'M' && a[i-1][j+1] == 'S');
-
  sol += (a[i-1][j-1] == 'S'  && a[i+1][j+1] == 'M'
 	&& a[i+1][j-1] == 'M' && a[i-1][j+1] == 'S');
-
-
  sol += (a[i-1][j-1] == 'M'  && a[i+1][j+1] == 'S'
 	&& a[i+1][j-1] == 'S' && a[i-1][j+1] == 'M');
-
-
  sol += (a[i-1][j-1] == 'S'  && a[i+1][j+1] == 'M'
 	&& a[i+1][j-1] == 'S' && a[i-1][j+1] == 'M');
-
 			}
 		}
 	}	
