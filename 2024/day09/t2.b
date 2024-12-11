@@ -26,7 +26,7 @@ main(argv:list of string)
 		}else
 			b[i] = -1;
 	}
-	dump(a,b);
+	#dump(a,b);
 	i = len b - 1;
 	m = b[i];
 	while(m > 0) {
@@ -44,9 +44,9 @@ main(argv:list of string)
 		m = b[i];
 	}
 
-	dump(a,b);
-	for(l := moves; l != nil; l = tl l)
-		print("(%d,%d,%d)\n", (hd l).t0, (hd l).t1, (hd l).t2);
+	#dump(a,b);
+	#for(l := moves; l != nil; l = tl l)
+	#	print("(%d,%d,%d)\n", (hd l).t0, (hd l).t1, (hd l).t2);
 
 	blk = 0;
 	for(i=0; i< len c; i++) {
@@ -57,13 +57,13 @@ main(argv:list of string)
 		for (l = rl; l != nil; l = tl l){
 			cnt += (hd l).t1;
 			for(j=0; j< (hd l).t1; j++) {
-				print("%d", (hd l).t0);
+				#print("%d", (hd l).t0);
 				total += big (blk * (hd l).t0);
 				blk++;
 			}
 		}
 		if (b[i] == -1) for(j = a[i]; j > 0; j--){
-			print(".");
+			#print(".");
 			blk++;
 		}
 	}
