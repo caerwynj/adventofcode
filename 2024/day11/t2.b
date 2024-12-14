@@ -1,12 +1,12 @@
 implement Command;
 include "cmd.m";
 
-x := array[32] of string;
-di := array[32] of list of string;
+x := array[256] of string;
+di := array[256] of list of string;
 l := 1;
-n := 25;
+n := 75;
 solutions := 0;
-lcnt := array[32] of { * => 0};
+lcnt := array[256] of { * => 0};
 
 main(argv:list of string)
 {
@@ -39,11 +39,6 @@ updated(): int
 		di[l] = string (big s * big 2024) :: nil;
 
 	return 0;
-}
-
-downdated()
-{
-	
 }
 
 visit()
