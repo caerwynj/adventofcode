@@ -152,6 +152,7 @@ mergesortnumeric(a, b: array of int, r: int)
 printmat(a: array of int, m,n: int)
 {
 	i,j,L: int =0;
+	L = m;
 	for(i=0;i<m;i++){
 		for(j=0;j<n;j++)
 			print("%c", a[i+L*j]);
